@@ -27,7 +27,6 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"io"
 	"log"
 	"net"
@@ -36,6 +35,8 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
+
+	tls "github.com/Carcraftz/utls"
 
 	"github.com/molatunji/fhttp/http2"
 	"github.com/molatunji/fhttp/http2/hpack"

@@ -5,12 +5,13 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"io"
 	"net/url"
 	"os"
 	"strings"
 	"testing"
+
+	tls "github.com/Carcraftz/utls"
 
 	http "github.com/molatunji/fhttp"
 	"github.com/molatunji/fhttp/http2"

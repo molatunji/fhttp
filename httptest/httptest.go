@@ -8,9 +8,10 @@ package httptest
 import (
 	"bufio"
 	"bytes"
-	tls "github.com/Carcraftz/utls"
 	"io"
 	"strings"
+
+	tls "github.com/Carcraftz/utls"
 
 	http "github.com/molatunji/fhttp"
 )

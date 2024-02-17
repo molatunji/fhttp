@@ -10,13 +10,14 @@ import (
 	"crypto/x509"
 	"flag"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"log"
 	"net"
 	"os"
 	"strings"
 	"sync"
 	"time"
+
+	tls "github.com/Carcraftz/utls"
 
 	http "github.com/molatunji/fhttp"
 	"github.com/molatunji/fhttp/internal"

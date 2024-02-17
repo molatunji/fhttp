@@ -9,14 +9,17 @@ package http
 import (
 	"bufio"
 	"bytes"
-	tls "github.com/Carcraftz/utls"
+	"compress/gzip"
 	"errors"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"net/textproto"
 	"net/url"
 	"strconv"
 	"strings"
+
+	tls "github.com/Carcraftz/utls"
 
 	"golang.org/x/net/http/httpguts"
 )
@@ -208,8 +211,11 @@ func ReadResponse(r *bufio.Reader, req *Request) (*Response, error) {
 }
 
 // RFC 7234, section 5.4: Should treat
+//
 //	Pragma: no-cache
+//
 // like
+//
 //	Cache-Control: no-cache
 func fixPragmaCacheControl(header Header) {
 	if hp, ok := header["Pragma"]; ok && len(hp) > 0 && hp[0] == "no-cache" {
@@ -231,15 +237,15 @@ func (r *Response) ProtoAtLeast(major, minor int) bool {
 //
 // This method consults the following fields of the response r:
 //
-//  StatusCode
-//  ProtoMajor
-//  ProtoMinor
-//  Request.Method
-//  TransferEncoding
-//  Trailer
-//  Body
-//  ContentLength
-//  Header, Values for non-canonical keys will have unpredictable behavior
+//	StatusCode
+//	ProtoMajor
+//	ProtoMinor
+//	Request.Method
+//	TransferEncoding
+//	Trailer
+//	Body
+//	ContentLength
+//	Header, Values for non-canonical keys will have unpredictable behavior
 //
 // The Response Body is closed after it is sent.
 func (r *Response) Write(w io.Writer) error {
@@ -369,4 +375,21 @@ func isProtocolSwitchResponse(code int, h Header) bool {
 func isProtocolSwitchHeader(h Header) bool {
 	return h.Get("Upgrade") != "" &&
 		httpguts.HeaderValuesContainsToken(h["Connection"], "Upgrade")
+}
+
+// BodyAsString returns the response body as a string
+func (r *Response) BodyAsString() string {
+
+	unbody, _ := ioutil.ReadAll(r.Body)
+	if strings.Contains(string(unbody), "\x1f\x8b\b") {
+		r.Body = ioutil.NopCloser(bytes.NewBuffer(unbody))
+		reader, err := gzip.NewReader(r.Body)
+		if err == nil {
+			body, _ := ioutil.ReadAll(reader)
+			return string(body)
+
+		}
+	}
+	return string(unbody)
+
 }

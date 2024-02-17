@@ -13,7 +13,6 @@ import (
 	"crypto/rand"
 	"errors"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"io"
 	"io/ioutil"
 	"log"
@@ -27,6 +26,8 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
+
+	tls "github.com/Carcraftz/utls"
 
 	http "github.com/molatunji/fhttp"
 	"github.com/molatunji/fhttp/httptrace"

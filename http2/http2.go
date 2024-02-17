@@ -18,13 +18,14 @@ package http2
 import (
 	"bufio"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"io"
 	"os"
 	"sort"
 	"strconv"
 	"strings"
 	"sync"
+
+	tls "github.com/Carcraftz/utls"
 
 	http "github.com/molatunji/fhttp"
 

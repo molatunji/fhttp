@@ -13,7 +13,6 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"io"
 	"io/ioutil"
 	"log"
@@ -31,6 +30,8 @@ import (
 	"sync/atomic"
 	"testing"
 	"time"
+
+	tls "github.com/Carcraftz/utls"
 
 	http "github.com/molatunji/fhttp"
 	"github.com/molatunji/fhttp/http2/hpack"

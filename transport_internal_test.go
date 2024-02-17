@@ -10,12 +10,13 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"io"
 	"io/ioutil"
 	"net"
 	"strings"
 	"testing"
+
+	tls "github.com/Carcraftz/utls"
 
 	"github.com/molatunji/fhttp/internal"
 )

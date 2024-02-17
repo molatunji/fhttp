@@ -15,7 +15,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"io"
 	"log"
 	"math/rand"
@@ -35,6 +34,8 @@ import (
 	"syscall"
 	"testing"
 	"time"
+
+	tls "github.com/Carcraftz/utls"
 
 	. "github.com/molatunji/fhttp"
 	"github.com/molatunji/fhttp/httptest"

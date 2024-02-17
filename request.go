@@ -13,7 +13,6 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"io"
 	"mime"
 	"mime/multipart"
@@ -24,6 +23,8 @@ import (
 	"strconv"
 	"strings"
 	"sync"
+
+	tls "github.com/Carcraftz/utls"
 
 	"github.com/molatunji/fhttp/httptrace"
 

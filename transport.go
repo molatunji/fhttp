@@ -16,7 +16,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"io"
 	"log"
 	"net"
@@ -28,6 +27,8 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
+
+	tls "github.com/Carcraftz/utls"
 
 	"github.com/molatunji/fhttp/httptrace"
 

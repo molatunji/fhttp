@@ -19,7 +19,6 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"go/token"
 	"io"
 	"log"
@@ -37,6 +36,8 @@ import (
 	"testing"
 	"testing/iotest"
 	"time"
+
+	tls "github.com/Carcraftz/utls"
 
 	. "github.com/molatunji/fhttp"
 	"github.com/molatunji/fhttp/httptest"

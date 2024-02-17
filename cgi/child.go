@@ -11,13 +11,14 @@ import (
 	"bufio"
 	"errors"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"io"
 	"net"
 	"net/url"
 	"os"
 	"strconv"
 	"strings"
+
+	tls "github.com/Carcraftz/utls"
 
 	http "github.com/molatunji/fhttp"
 )

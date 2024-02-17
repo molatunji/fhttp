@@ -9,7 +9,6 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"hash/crc32"
 	"image"
 	"image/jpeg"
@@ -25,6 +24,8 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	tls "github.com/Carcraftz/utls"
 
 	"cloud.google.com/go/storage"
 	"github.com/molatunji/fhttp/http2"

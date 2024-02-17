@@ -12,7 +12,6 @@ import (
 	"crypto/rand"
 	"crypto/sha1"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"hash"
 	"io"
 	"log"
@@ -27,6 +26,8 @@ import (
 	"sync/atomic"
 	"testing"
 	"time"
+
+	tls "github.com/Carcraftz/utls"
 
 	. "github.com/molatunji/fhttp"
 	"github.com/molatunji/fhttp/httptest"

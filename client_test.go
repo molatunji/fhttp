@@ -12,7 +12,6 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"io"
 	"log"
 	"net"
@@ -24,6 +23,8 @@ import (
 	"sync/atomic"
 	"testing"
 	"time"
+
+	tls "github.com/Carcraftz/utls"
 
 	. "github.com/molatunji/fhttp"
 	"github.com/molatunji/fhttp/cookiejar"

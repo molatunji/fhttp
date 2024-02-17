@@ -31,7 +31,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"io"
 	"log"
 	"math"
@@ -45,6 +44,8 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	tls "github.com/Carcraftz/utls"
 
 	http "github.com/molatunji/fhttp"
 	"github.com/molatunji/fhttp/http2/hpack"

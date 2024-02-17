@@ -9,10 +9,11 @@ import (
 	"bytes"
 	"crypto/x509"
 	"fmt"
-	tls "github.com/Carcraftz/utls"
 	"io"
 	"strings"
 	"testing"
+
+	tls "github.com/Carcraftz/utls"
 
 	. "github.com/molatunji/fhttp"
 	"github.com/molatunji/fhttp/httptest"
