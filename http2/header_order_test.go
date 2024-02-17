@@ -2,8 +2,8 @@ package http2
 
 import (
 	"bytes"
-	http "github.com/Carcraftz/fhttp"
-	"github.com/Carcraftz/fhttp/httptrace"
+	http "github.com/molatunji/fhttp"
+	"github.com/molatunji/fhttp/httptrace"
 	"log"
 	"strings"
 	"testing"

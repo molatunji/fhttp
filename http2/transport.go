@@ -11,9 +11,9 @@ import (
 	"bytes"
 	"context"
 	"crypto/rand"
-	tls "github.com/Carcraftz/utls"
 	"errors"
 	"fmt"
+	tls "github.com/Carcraftz/utls"
 	"io"
 	"io/ioutil"
 	"log"
@@ -28,10 +28,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	http "github.com/Carcraftz/fhttp"
-	"github.com/Carcraftz/fhttp/httptrace"
+	http "github.com/molatunji/fhttp"
+	"github.com/molatunji/fhttp/httptrace"
 
-	"github.com/Carcraftz/fhttp/http2/hpack"
+	"github.com/molatunji/fhttp/http2/hpack"
 	"golang.org/x/net/http/httpguts"
 	"golang.org/x/net/idna"
 )

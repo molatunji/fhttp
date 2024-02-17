@@ -12,10 +12,10 @@ import (
 	"compress/gzip"
 	"compress/zlib"
 	"context"
-	tls "github.com/Carcraftz/utls"
 	"encoding/json"
 	"errors"
 	"fmt"
+	tls "github.com/Carcraftz/utls"
 	"io"
 	"log"
 	"math/rand"
@@ -36,11 +36,11 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/Carcraftz/fhttp"
-	"github.com/Carcraftz/fhttp/httptest"
-	"github.com/Carcraftz/fhttp/httputil"
-	"github.com/Carcraftz/fhttp/internal"
-	"github.com/Carcraftz/fhttp/internal/testenv"
+	. "github.com/molatunji/fhttp"
+	"github.com/molatunji/fhttp/httptest"
+	"github.com/molatunji/fhttp/httputil"
+	"github.com/molatunji/fhttp/internal"
+	"github.com/molatunji/fhttp/internal/testenv"
 )
 
 type dummyAddr string
@@ -5027,10 +5027,11 @@ func benchmarkClientServerParallel(b *testing.B, parallelism int, useTLS bool) {
 // The client code runs in a subprocess.
 //
 // For use like:
-//   $ go test -c
-//   $ ./http.test -test.run=XX -test.bench=BenchmarkServer -test.benchtime=15s -test.cpuprofile=http.prof
-//   $ go tool pprof http.test http.prof
-//   (pprof) web
+//
+//	$ go test -c
+//	$ ./http.test -test.run=XX -test.bench=BenchmarkServer -test.benchtime=15s -test.cpuprofile=http.prof
+//	$ go tool pprof http.test http.prof
+//	(pprof) web
 func BenchmarkServer(b *testing.B) {
 	b.ReportAllocs()
 	// Child process mode;

@@ -9,9 +9,9 @@ package cgi
 
 import (
 	"bufio"
-	tls "github.com/Carcraftz/utls"
 	"errors"
 	"fmt"
+	tls "github.com/Carcraftz/utls"
 	"io"
 	"net"
 	"net/url"
@@ -19,7 +19,7 @@ import (
 	"strconv"
 	"strings"
 
-	http "github.com/Carcraftz/fhttp"
+	http "github.com/molatunji/fhttp"
 )
 
 // Request returns the HTTP request as represented in the current

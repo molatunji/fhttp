@@ -1,19 +1,19 @@
 package http_test
 
 import (
-	tls "github.com/Carcraftz/utls"
 	"crypto/x509"
 	"encoding/json"
 	"flag"
 	"fmt"
+	tls "github.com/Carcraftz/utls"
 	"io"
 	"net/url"
 	"os"
 	"strings"
 	"testing"
 
-	http "github.com/Carcraftz/fhttp"
-	"github.com/Carcraftz/fhttp/http2"
+	http "github.com/molatunji/fhttp"
+	"github.com/molatunji/fhttp/http2"
 )
 
 // Basic http test with Header Order + enable push

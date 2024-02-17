@@ -15,11 +15,11 @@ import (
 	"compress/gzip"
 	"context"
 	"crypto/rand"
-	tls "github.com/Carcraftz/utls"
 	"crypto/x509"
 	"encoding/binary"
 	"errors"
 	"fmt"
+	tls "github.com/Carcraftz/utls"
 	"go/token"
 	"io"
 	"log"
@@ -38,12 +38,12 @@ import (
 	"testing/iotest"
 	"time"
 
-	. "github.com/Carcraftz/fhttp"
-	"github.com/Carcraftz/fhttp/httptest"
-	"github.com/Carcraftz/fhttp/httptrace"
-	"github.com/Carcraftz/fhttp/httputil"
-	"github.com/Carcraftz/fhttp/internal"
-	"github.com/Carcraftz/fhttp/internal/nettrace"
+	. "github.com/molatunji/fhttp"
+	"github.com/molatunji/fhttp/httptest"
+	"github.com/molatunji/fhttp/httptrace"
+	"github.com/molatunji/fhttp/httputil"
+	"github.com/molatunji/fhttp/internal"
+	"github.com/molatunji/fhttp/internal/nettrace"
 
 	"golang.org/x/net/http/httpguts"
 )
@@ -3428,6 +3428,7 @@ func (c writerFuncConn) Write(p []byte) (n int, err error) { return c.write(p) }
 //   - we reused a keep-alive connection
 //   - we haven't yet received any header data
 //   - either we wrote no bytes to the server, or the request is idempotent
+//
 // This automatically prevents an infinite resend loop because we'll run out of
 // the cached keep-alive connections eventually.
 func TestRetryRequestsOnError(t *testing.T) {
